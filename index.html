@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ 
+
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" href="index.css">
+  <title>Music xo</title>
+</head>
+<body>
+	<div class="player">
+	  <div class="header">
+	    <i class="fas fa-arrow-left header-icon"></i>
+	    <i class="fas fa-ellipsis-v header-icon"></i>
+	  </div>
+	  <div class="body">
+	    <div class="details">
+	      <div class="now-playing">Playing Now</div>
+	      <div class="track-art">
+	        <img class="track-image" src="https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=50&w=50" alt="track one" />
+	      </div>
+	      <div class="track-name">Track 1</div>
+	      <div class="track-artist"> -Track Artist- </div>
+	    </div>
+	     <!-- Define the section for displaying the seek slider-->
+    <div class="slider_container">
+      <div class="current-time">00:00</div>
+      <input type="range" min="1" max="100"
+        value="0" class="seek_slider" onchange="seekTo()">
+      <div class="total-duration">00:00</div>
+    </div>
+
+      <div class="buttons">
+	      <button class="repeat-btn" onclick="repeatTrack()">
+            <i class="fas fa-undo"></i>	      
+          </button>
+	      <button class="prev-btn" onclick="prevTrack()">
+	        <i class="fas fa-step-backward fa-1x"></i>
+	      </button>
+	      <button class="playpause-btn" onclick="playPause()">
+	        <i class="fas fa-play fa-2x"></i>
+	      </button>
+	      <button class="next-btn" onclick="nextTrack()">
+	        <i class="fas fa-step-forward fa-1x"></i>
+	      </button>
+	      <button class="shuffle-btn" onclick="shuffleTrack()">
+	        <i class="fas fa-random"></i>
+	      </button>
+	    </div>
+	     <!-- Define the section for displaying the volume slider-->
+    <div class="slider_container">
+      <i class="fa fa-volume-down"></i>
+      <input type="range" min="1" max="100"
+        value="99" class="volume_slider" onchange="setVolume()">
+      <i class="fa fa-volume-up"></i>
+    </div>
+	 
+	  </div>
+	</div>
+	
+	
+	  <script src="index.js"></script>
+</body>
+</html>

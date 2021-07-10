@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #f2f2f2;
+  display: grid;
+  place-items: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.player{
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow:  -5px 5px 10px #bed4fa,
+             5px -5px 10px #e5eefd;
+  
+}
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+i{
+  color: #081231;
+  font-size: .8rem;
+  font-weight: 100;
+}
+.detaials{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+.track-art{
+  display: grid;
+  place-items: center;
+}
+.track-art img{
+  border: 2px solid #f2f2f2;
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+}
+.now-playing, 
+.track-name,
+.track-artist{
+  text-align: center;
+  margin-bottom: .2rem;
+}
+.track-name{
+  font-weight: 500;
+}
+.slider_container{
+  width: 100%;
+  display: flex;
+  color: #081231;
+  font-size: .7rem;
+  margin: 2rem 0;
+  justify-content: space-between;
+}
+.slider_container input{
+  margin: 0 1rem;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #e5eefd;
+  border-radius: 2rem;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: transparent;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  background: #081231;
+  cursor: pointer;
+  margin-top: -4px;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #0b1842;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.buttons button{
+  background: transparent;
+  border: transparent;
+  border-radius: 100%;
+  padding: 0 .5rem;
+  outline: none;
+  cursor: pointer;
+}
+button i{
+  color: #081231;
+}
+.next-btn,
+.prev-btn{
+  font-size: 1rem;
+}
+
+.rotate{
+  height: 100%;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
